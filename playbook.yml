@@ -1,0 +1,7 @@
+---
+- name: Deploy services
+  hosts: all
+  roles:
+    - web
+    - api
+    - db

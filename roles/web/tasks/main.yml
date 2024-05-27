@@ -1,0 +1,7 @@
+---
+- name: Deploy api-web container
+  docker_container:
+    name: api-web
+    image: "api-web:latest"
+    ports:
+      - "8091:80"

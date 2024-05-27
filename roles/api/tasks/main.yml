@@ -1,0 +1,9 @@
+---
+- name: Deploy api-app container
+  docker_container:
+    name: api-app
+    image: "api-app:latest"
+    ports:
+      - "3001:3000"
+    # depends_on:
+    #   - api-mongo

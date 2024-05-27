@@ -1,0 +1,9 @@
+---
+- name: Deploy api-mongo container
+  docker_container:
+    name: api-mongo
+    image: "mongo:latest"
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo-data:/data/db
