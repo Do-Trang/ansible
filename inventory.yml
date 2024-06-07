@@ -1,26 +1,19 @@
-# all:
-#   children:
-#     web:
-#       hosts:
-#         web_host:
-#           ansible_host: localhost
-#           ansible_port: 2222
-#           ansible_user: vagrant
-#           ansible_ssh_private_key_file: .vagrant/machines/web/virtualbox/private_key
-#           ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-#     api:
-#       hosts:
-#         api_host:
-#           ansible_host: localhost
-#           ansible_port: 2200
-#           ansible_user: vagrant
-#           ansible_ssh_private_key_file: .vagrant/machines/api/virtualbox/private_key
-#           ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
-#     db:
-#       hosts:
-#         db_host:
-#           ansible_host: localhost
-#           ansible_port: 2201
-#           ansible_user: vagrant
-#           ansible_ssh_private_key_file: .vagrant/machines/db/virtualbox/private_key
-#           ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+
+
+
+# [web]
+# ssh -i "ansibletest.pem" ec2-user@ec2-13-212-117-27.ap-southeast-1.compute.amazonaws.com
+
+# [api]
+# ssh -i "ansibletest.pem" ec2-user@ec2-13-212-117-27.ap-southeast-1.compute.amazonaws.com
+
+# [db]
+# ssh -i "ansibletest.pem" ec2-user@ec2-13-212-117-27.ap-southeast-1.compute.amazonaws.com
+
+# [all:vars]
+# ansible_python_interpreter=/usr/bin/python3]
+
+all:
+  hosts:
+    ec2-user@ec2-13-212-117-27.ap-southeast-1.compute.amazonaws.com:
+      ansible_ssh_private_key_file: /home/trang/vdt/ansible/ansibletest.pem
